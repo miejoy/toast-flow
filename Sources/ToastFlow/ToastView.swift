@@ -32,11 +32,11 @@ struct ToastView: View {
         } else {
             Text(toastState.message)
                 .font(.footnote)
-                .foregroundColor(.toastTextColor)
+                .foregroundStyle(Color.toastTextColor)
                 .lineLimit(2)
                 .padding(10)
                 .background(Color.toastBgColor)
-                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 5))
+                .background(.ultraThinMaterial, in: .rect(cornerRadius: 5))
                 .opacity(toastState.displayState == .onDisplay ? 1 : 0)
         }
     }
